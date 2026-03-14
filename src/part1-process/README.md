@@ -4,10 +4,6 @@ Before a coding agent can be useful, the work it is given must be structured wel
 
 ## Chapters
 
-1. [Agile and Kanban](01-agile-and-kanban.md) — The Kanban board as a shared model of work; how coding agents fit into flow and WIP.
-2. [Definition of Ready](02-definition-of-ready.md) — What makes a task ready for an agent; writing agent-ready acceptance criteria.
-3. [Definition of Done](03-definition-of-done.md) — Extending DoD when an agent wrote the code: human review, test coverage, audit trail.
-
 ---
 
 [← Back to table of contents](../../README.md) · [Next: Part 2 →](../part2-ai-fundamentals/README.md)

@@ -4,10 +4,6 @@ You do not need to understand machine learning to use coding agents effectively,
 
 ## Chapters
 
-4. [What Is an LLM?](04-what-is-an-llm.md) — A working mental model for practitioners: next-token prediction, instruction tuning.
-5. [Tokens and Context Windows](05-tokens-and-context-windows.md) — How text becomes tokens; context size, cost, and quality implications.
-6. [How Models Fail](06-how-models-fail.md) — Hallucination, sycophancy, context drift, overconfidence; recognizing failure modes.
-
 ---
 
 [← Part 1](../part1-process/README.md) · [Back to table of contents](../../README.md) · [Next: Part 3 →](../part3-coding-agents/README.md)
