@@ -4,8 +4,5 @@
         "name": "Saverio Ferrara",
         "email": "fsferrara@gmail.com"
     },
-    "version": "1.0.0",
-    "skills": [
-        "./skills/hello"
-    ]
+    "version": "1.0.0"
 }
