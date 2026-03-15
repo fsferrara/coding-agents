@@ -10,6 +10,7 @@
     },
     "plugins": [
         {
+            "name": "coding-agents-sdlc"
             "source": "./plugins/coding-agents-sdlc"
         }
     ]
