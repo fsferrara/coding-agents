@@ -10,8 +10,8 @@
     },
     "plugins": [
         {
-            "name": "coding-agents-sdlc",
-            "source": "./plugins/coding-agents-sdlc"
+            "name": "code-review",
+            "source": "./plugins/code-review"
         }
     ]
 }
