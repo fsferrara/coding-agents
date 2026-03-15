@@ -1,0 +1,17 @@
+{
+    "name": "coding-agents-marketplace",
+    "owner": {
+        "name": "Saverio Ferrara",
+        "email": "fsferrara@gmail.com"
+    },
+    "metadata": {
+        "description": "Configuration and Skills for coding agents focused on the Software Development Life Cycle (SDLC) and software engineering best practices.",
+        "version": "1.0.0"
+    },
+    "plugins": [
+        {
+            "name": "coding-agents-sdlc",
+            "source": "./plugins/coding-agents-sdlc"
+        }
+    ]
+}
