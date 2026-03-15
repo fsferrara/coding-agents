@@ -21,6 +21,12 @@ The [`skills/`](skills/) directory contains practical companion files referenced
 
 ---
 
+## Community
+
+Have a question or idea? Join the conversation in [GitHub Discussions](https://github.com/fsferrara/coding-agents/discussions).
+
+---
+
 ## License
 
 [CC0 1.0 Universal](LICENSE) — public domain.

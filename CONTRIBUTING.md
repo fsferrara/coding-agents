@@ -80,6 +80,7 @@ By contributing, you agree that your contributions will be released under the sa
 ## Questions?
 
 If you're unsure about anything, feel free to:
+- [Start a discussion](https://github.com/fsferrara/coding-agents/discussions) for questions, ideas, or general conversation
 - Open an issue to discuss before starting work
 - Ask questions in your pull request
 - Reach out to the maintainers
