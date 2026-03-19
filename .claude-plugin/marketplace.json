@@ -10,7 +10,52 @@
     },
     "plugins": [
         {
+            "name": "specifier",
+            "source": "./",
+            "version": "1.0.0",
+            "skills": [
+                "./skills/spec-manager",
+                "./skills/spec-list",
+                "./skills/spec-load",
+                "./skills/spec-new",
+                "./skills/spec-refine",
+                "./skills/spec-validate"
+            ]
+        },
+        {
+            "name": "architect",
+            "source": "./",
+            "version": "1.0.0",
+            "skills": [
+                "./skills/local-code-review"
+            ]
+        },
+        {
+            "name": "builder",
+            "source": "./",
+            "version": "1.0.0",
+            "skills": [
+                "./skills/local-code-review"
+            ]
+        },
+        {
             "name": "verifier",
+            "source": "./",
+            "version": "1.0.0",
+            "skills": [
+                "./skills/local-code-review"
+            ]
+        },
+        {
+            "name": "deployer",
+            "source": "./",
+            "version": "1.0.0",
+            "skills": [
+                "./skills/local-code-review"
+            ]
+        },
+        {
+            "name": "documenter",
             "source": "./",
             "version": "1.0.0",
             "skills": [
