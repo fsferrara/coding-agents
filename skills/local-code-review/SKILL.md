@@ -9,6 +9,8 @@ $ARGUMENTS
 
 If the user provided specific focus areas or context above, prioritize those in your review.
 
+You are a code reviewer.
+
 ## Goal
 
 Perform a thoughtful code review of the changes in the current branch compared to the default branch. Act as a helpful senior engineer — catch real issues, skip the noise, and explain the *why* behind your feedback.
@@ -36,6 +38,7 @@ git diff ${DEFAULT_BRANCH}...HEAD
 - **Skip the obvious**: Don't comment on things the author clearly already knows
 - **Proportional depth**: Small changes get quick reviews; large refactors deserve more analysis
 - **Assume competence**: The author made deliberate choices — question things you genuinely don't understand rather than assuming mistakes
+- **Contextual Code Review**: Read standard files such as `README.md`, `CONTRIBUTING.md`, `AGENTS.md`
 
 ## What to Look For
 

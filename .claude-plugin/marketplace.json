@@ -10,8 +10,12 @@
     },
     "plugins": [
         {
-            "name": "code-review",
-            "source": "./plugins/code-review"
+            "name": "verifier",
+            "source": "./",
+            "version": "1.0.0",
+            "skills": [
+                "./skills/local-code-review"
+            ]
         }
     ]
 }
