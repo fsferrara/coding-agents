@@ -59,7 +59,7 @@
             "source": "./",
             "version": "1.0.0",
             "skills": [
-                "./skills/local-code-review"
+                "./skills/documenter/create-technical-presentation"
             ]
         }
     ]
