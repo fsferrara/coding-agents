@@ -1,32 +1,20 @@
----
-name: spec-validate
-description: >
-  Check that a spec is complete enough to hand off to a coding agent. Use this
-  skill whenever the user wants to validate a spec, check spec quality, or says
-  "validate the spec", "is this spec ready", "check the spec", or
-  "/spec-validate".
----
-
 # Validate a Spec
 
 Checks that a spec is complete enough to hand off to an agent.
 
-> **Shared conventions:** Read `skills/spec-manager/SKILL.md` for folder layout
-> and required sections.
-
 ## Steps
 
-1. **Resolve the slug:** use the provided slug, or scan `specs/*/spec.md` and ask the user to pick one.
+1. **Resolve the slug:** use the provided slug, or scan `<specs-root>/*/spec.md` and ask the user to pick one.
 
-2. **Read** all files in `specs/<slug>/`: `spec.md`, `design.md`, and `tasks.md`
+2. **Read** all files in `<specs-root>/<slug>/`: `spec.md`, `design.md`, and `tasks.md`
 
 3. **Required checks** (must all pass):
 
 | # | Check | File | Rule |
 |---|-------|------|------|
-| 1 | spec.md exists | spec.md | `specs/<slug>/spec.md` is present |
-| 2 | design.md exists | design.md | `specs/<slug>/design.md` is present |
-| 3 | tasks.md exists | tasks.md | `specs/<slug>/tasks.md` is present |
+| 1 | spec.md exists | spec.md | `<specs-root>/<slug>/spec.md` is present |
+| 2 | design.md exists | design.md | `<specs-root>/<slug>/design.md` is present |
+| 3 | tasks.md exists | tasks.md | `<specs-root>/<slug>/tasks.md` is present |
 | 4 | Overview | spec.md | Non-empty, at least one sentence |
 | 5 | Context & Background | spec.md | Non-empty, explains why |
 | 6 | User Story | spec.md | Follows "As a ... I want ... So that ..." format |
@@ -55,7 +43,7 @@ Checks that a spec is complete enough to hand off to an agent.
 5. **Report format:**
 
 ```
-Validation: specs/<slug>/
+Validation: <specs-root>/<slug>/
 
 Required:
   [PASS] spec.md exists
@@ -77,4 +65,4 @@ Advisory:
 Result: 11/12 required checks passed
 ```
 
-6. If any required checks fail, offer: _"Want me to fix these with `/spec-refine`?"_
+6. If any required checks fail, offer: _"Want me to refine these sections?"_

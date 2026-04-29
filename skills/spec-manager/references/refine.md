@@ -1,27 +1,12 @@
----
-name: spec-refine
-description: >
-  Improve an existing spec's weak or incomplete sections. Use this skill
-  whenever the user wants to refine, improve, or flesh out a spec, or says
-  "refine the spec", "improve the spec", "the spec needs work", "flesh out
-  the spec", or "/spec-refine". Also triggers on "spec is too thin" or
-  "add more detail to the spec".
----
-
 # Refine an Existing Spec
 
 Opens an existing spec for targeted refinement of weak sections.
 
-> **Shared conventions:** Read `skills/spec-manager/SKILL.md` for folder layout
-> and required sections. Refer to the templates in `skills/spec-manager/assets/`
-> (`spec-template.md`, `design-template.md`, `tasks-template.md`) for section
-> structure.
-
 ## Steps
 
-1. **Resolve the slug:** use the provided slug, or scan `specs/*/spec.md` and ask the user to pick one.
+1. **Resolve the slug:** use the provided slug, or scan `<specs-root>/*/spec.md` and ask the user to pick one.
 
-2. **Read** all files in `specs/<slug>/`: `spec.md`, `design.md`, and `tasks.md`
+2. **Read** all files in `<specs-root>/<slug>/`: `spec.md`, `design.md`, and `tasks.md`
 
 3. **Assess gaps** across all files:
 
@@ -53,7 +38,4 @@ Opens an existing spec for targeted refinement of weak sections.
    - Ask 2-4 questions per round, propose defaults
    - 1-2 rounds max
 
-6. **Apply edits** directly to the appropriate file (`spec.md`, `design.md`, or `tasks.md`).
-
-7. If the user mentions design files or diagrams, remind them:
-   _"You can drop those into `specs/<slug>/design/` and reference them in `design.md`."_
+6. **Apply edits** directly to the appropriate file (`spec.md`, `design.md`, or `tasks.md`). If the user mentions design files or diagrams, remind them they can drop those into `<specs-root>/<slug>/design/` and reference them in `design.md`.

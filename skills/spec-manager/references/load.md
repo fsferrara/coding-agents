@@ -1,26 +1,14 @@
----
-name: spec-load
-description: >
-  Load a spec into context and prime the coding agent for implementation planning.
-  Use this skill whenever the user wants to load a spec, start working from a spec,
-  or says "load the spec", "open the spec", "let's implement this spec",
-  "load spec into plan mode", or "/spec-load".
----
-
 # Load a Spec
 
 Loads a spec into context and primes for implementation planning.
-
-> **Shared conventions:** Read `skills/spec-manager/SKILL.md` for folder layout
-> and required sections.
 
 ## Steps
 
 1. **Resolve the slug:**
    - Use the explicitly provided slug if given
-   - Otherwise, scan `specs/*/spec.md` and ask: _"Which spec would you like to load?"_
+   - Otherwise, scan `<specs-root>/*/spec.md` and ask: _"Which spec would you like to load?"_
 
-2. **Read all files** in `specs/<slug>/`:
+2. **Read all files** in `<specs-root>/<slug>/`:
    - `spec.md` -- requirements
    - `design.md` -- technical decisions
    - `tasks.md` -- implementation plan

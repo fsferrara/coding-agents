@@ -14,12 +14,7 @@
             "source": "./",
             "version": "1.0.0",
             "skills": [
-                "./skills/spec-manager",
-                "./skills/spec-list",
-                "./skills/spec-load",
-                "./skills/spec-new",
-                "./skills/spec-refine",
-                "./skills/spec-validate"
+                "./skills/spec-manager"
             ]
         },
         {
