@@ -11,11 +11,7 @@
     "plugins": [
         {
             "name": "specifier",
-            "source": "./",
-            "version": "1.0.0",
-            "skills": [
-                "./skills/spec-manager"
-            ]
+            "source": "./.claude-plugin/specifier"
         },
         {
             "name": "architect",

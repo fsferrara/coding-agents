@@ -1,0 +1,8 @@
+{
+  "name": "specifier",
+  "description": "A plugin that provides a skill for managing specifications in the context of coding agents",
+  "version": "1.0.0",
+  "skills": [
+      "./skills/spec-manager"
+  ]
+}
