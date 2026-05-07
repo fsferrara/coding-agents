@@ -10,49 +10,16 @@
     },
     "plugins": [
         {
+            "name": "documenter",
+            "source": "./.claude-plugin/documenter"
+        },
+        {
             "name": "specifier",
             "source": "./.claude-plugin/specifier"
         },
         {
-            "name": "architect",
-            "source": "./",
-            "version": "1.0.0",
-            "skills": [
-                "./skills/local-code-review"
-            ]
-        },
-        {
-            "name": "builder",
-            "source": "./",
-            "version": "1.0.0",
-            "skills": [
-                "./skills/local-code-review"
-            ]
-        },
-        {
             "name": "verifier",
-            "source": "./",
-            "version": "1.0.0",
-            "skills": [
-                "./skills/local-code-review",
-                "./skills/agentive-code-review"
-            ]
-        },
-        {
-            "name": "deployer",
-            "source": "./",
-            "version": "1.0.0",
-            "skills": [
-                "./skills/local-code-review"
-            ]
-        },
-        {
-            "name": "documenter",
-            "source": "./",
-            "version": "1.0.0",
-            "skills": [
-                "./skills/documenter/create-technical-presentation"
-            ]
+            "source": "./.claude-plugin/verifier"
         }
     ]
 }

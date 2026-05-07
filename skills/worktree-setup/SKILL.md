@@ -22,15 +22,17 @@ Start by understanding what the user wants to work on. Parse what they already s
 
 Try to batch your questions into a single message rather than asking one at a time.
 
-## Generating the branch name
+## Determining the branch name
 
-Based on the spec content or user description, generate a branch name following this convention:
+If the user already named a branch (e.g. "start working on `feature/dark-mode`", "resume `bugfix/login-null`", "check out `origin/feature/foo`"), use that name verbatim — don't rewrite their prefix or add one. `workon` handles both brand-new and existing branches, so you don't need to check which kind it is before running.
+
+If they didn't name one, generate it from the spec content or their description using this default convention:
 
 - With spec ID: `<type>/<SPEC-ID>_<short-description>`
 - Without spec ID: `<type>/<short-description>`
 
 Where:
-- `<type>` is `feature` or `hotfix`
+- `<type>` is typically `feature` or `hotfix` (pick the one that fits; ask if genuinely ambiguous)
 - `<SPEC-ID>` is the spec slug or identifier (e.g., `user-auth-flow`)
 - `<short-description>` is a concise kebab-case summary, 3-5 words max
 
@@ -39,16 +41,16 @@ Where:
 - `hotfix/fix-login-redirect_null-check`
 - `feature/dark-mode-support` (no spec ID)
 
-Present the branch name to the user for confirmation before creating anything. If they suggest a different name, use theirs.
+When you generate a name, show it to the user and let them correct it before you create anything. If they hand you a name directly, you can skip this confirmation.
 
 ## Creating the worktree
 
 Use the **Bash tool** to run the bundled `workon` shell function. Do not use the built-in `EnterWorktree` tool or any other worktree mechanism — always use the bundled script so that the branch naming and directory layout conventions are respected.
 
-The script lives at `scripts/worktrees.sh` relative to this skill's directory.
+The script lives at `scripts/worktrees-setup.sh` relative to this skill's directory.
 
 ```bash
-source <this-skill-dir>/scripts/worktrees.sh && workon "<branch-name>" [base]
+source <this-skill-dir>/scripts/worktrees-setup.sh && workon "<branch-name>" [base]
 ```
 
 Replace `<this-skill-dir>` with the actual absolute path to this skill's directory.
@@ -57,15 +59,17 @@ If the user specified a base branch (e.g., `develop`, `main`), pass it as the se
 
 On success, the script prints the absolute path to the created worktree directory. Capture this path from the output — use it when reporting completion.
 
+`workon` is safe to re-run and handles the common states automatically: if the worktree already exists for that branch it just prints the path; if the branch exists locally or only on a remote it checks it out (creating a tracking branch for the remote case) instead of erroring. You don't need to pre-check any of this — just call `workon` and report whatever path it prints.
+
 **Requirements:**
 - The command must be run from the root of a git repository. If the current directory is not a repo root, tell the user and ask them to navigate there first.
-- If the worktree directory already exists, `workon` will error. Inform the user and ask how to proceed.
+- If the target directory already exists but isn't a worktree for this branch, `workon` will error to avoid clobbering it. Pass that along to the user and ask how to proceed.
 
 ## Reporting completion
 
 After creating the worktree, tell the user:
-- The worktree is ready
+- The worktree is ready (briefly note whether this was a new branch, a resumed local branch, or a freshly tracked remote branch, if the git output makes that clear)
 - The branch name (e.g., `feature/user-auth-flow_add-oauth-support`)
-- The full path to the worktree directory (e.g., `/Users/.../user-auth-flow_add-oauth-support/`)
+- The full path to the worktree directory (e.g., `/Users/.../coding-agents.wt/user-auth-flow_add-oauth-support/`)
 
-If a follow-up agent will continue the work, clearly state the worktree path so it knows where to operate. The worktree is a sibling directory of the main repo — the directory name is the branch name without the type prefix (the part after the last `/`).
+If a follow-up agent will continue the work, clearly state the worktree path so it knows where to operate. All worktrees for a given repo live together under a sibling folder named `<repo-name>.wt/`. The worktree's own directory name is the branch name without the type prefix (the part after the last `/`) — so `feature/user-auth-flow_add-oauth-support` in the `coding-agents` repo lands at `../coding-agents.wt/user-auth-flow_add-oauth-support/`.

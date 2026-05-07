@@ -1,0 +1,8 @@
+{
+  "name": "verifier",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/local-code-review",
+    "./skills/agentive-code-review"
+  ]
+}

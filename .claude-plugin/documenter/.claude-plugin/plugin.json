@@ -1,0 +1,7 @@
+{
+  "name": "documenter",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/create-technical-presentation"
+  ]
+}
