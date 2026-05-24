@@ -16,6 +16,8 @@ The book is read directly on GitHub — no build tools, no hosted site. Navigate
   - Each part has a `README.md` with description and chapter links.
   - Chapters are folders with their own `README.md`.
 - `skills/` -- Companion files (skills, configurations, prompts) referenced from chapters.
+- `agents/` -- Actor archetype definitions referencing one or more skills. See `agents/README.md`.
+- `commands/` -- Reserved for slash-command delegators (not yet populated).
 
 ## Writing Conventions
 
