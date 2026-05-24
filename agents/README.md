@@ -5,9 +5,22 @@ Each agent is a thin role wrapper that points at one or more skills under
 `skills/`. Skills remain the unit of reusable behaviour; agents describe
 **when** that behaviour applies and **who** owns it.
 
+## Layout
+
+Each agent lives in its own folder, mirroring the `skills/<name>/` convention:
+
+```
+agents/
+  <name>/
+    <name>.md          # the agent definition (frontmatter + body)
+```
+
+The folder leaves room for per-agent auxiliary files (`references/`,
+`examples/`, `assets/`) without cluttering the top of `agents/`.
+
 ## Frontmatter schema
 
-Every `agents/<name>.md` file starts with YAML frontmatter:
+Every `agents/<name>/<name>.md` file starts with YAML frontmatter:
 
 ```yaml
 ---
@@ -61,11 +74,15 @@ Below the frontmatter, every agent follows the same fixed structure:
 
 How to consume an agent on each runtime:
 
-- **Claude Code** — files in `agents/` at the repo root are auto-discovered as
-  subagents. The Task tool will list them by `name` and route based on
-  `description`.
+- **Claude Code** — wire `agents/` into the project via a symlink
+  (`.claude/agents/ -> ../agents`) or copy step. Claude Code's subagent loader
+  recurses into subdirectories under `.claude/agents/` and identifies agents by
+  their `name:` frontmatter, so `agents/architect/architect.md` is discovered
+  exactly the same as a flat `agents/architect.md`. The Task tool will list
+  them by `name` and route based on `description`.
 - **OpenCode** — point its agent loader at `agents/` (or symlink it into the
-  expected location). Frontmatter and body are read directly.
+  expected location). Frontmatter and body are read directly from each
+  `agents/<name>/<name>.md`.
 - **Codex** — no native agent registry. Paste the agent file (frontmatter +
   body) into a system prompt, or load it via your own scaffolding.
 
