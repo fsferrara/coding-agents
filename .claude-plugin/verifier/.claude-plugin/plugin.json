@@ -1,6 +1,7 @@
 {
   "name": "verifier",
   "version": "1.0.0",
+  "agents": ["./agents/verifier/verifier.md"],
   "skills": [
     "./skills/local-code-review",
     "./skills/agentive-code-review"

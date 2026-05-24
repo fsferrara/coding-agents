@@ -10,16 +10,32 @@
     },
     "plugins": [
         {
-            "name": "documenter",
-            "source": "./.claude-plugin/documenter"
-        },
-        {
             "name": "specifier",
             "source": "./.claude-plugin/specifier"
         },
         {
+            "name": "architect",
+            "source": "./.claude-plugin/architect"
+        },
+        {
+            "name": "builder",
+            "source": "./.claude-plugin/builder"
+        },
+        {
             "name": "verifier",
             "source": "./.claude-plugin/verifier"
+        },
+        {
+            "name": "deployer",
+            "source": "./.claude-plugin/deployer"
+        },
+        {
+            "name": "documenter",
+            "source": "./.claude-plugin/documenter"
+        },
+        {
+            "name": "utilities",
+            "source": "./.claude-plugin/utilities"
         }
     ]
 }

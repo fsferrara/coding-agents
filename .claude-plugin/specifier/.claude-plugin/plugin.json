@@ -1,6 +1,7 @@
 {
   "name": "specifier",
   "version": "1.0.0",
+  "agents": ["./agents/specifier/specifier.md"],
   "skills": [
     "./skills/spec-manager"
   ]
