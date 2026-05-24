@@ -1,7 +1,7 @@
   ┌────────────┬────────────────────┬─────────────────────────────────────────────────────────────────────────────┐
-  │   Agent    │    SDLC Phases     │                                 Key Skills                                  │                                                                                                                      
+  │   Agent    │    SDLC Phases     │                                 Key Skills                                  │
   ├────────────┼────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
-  │ Specifier  │ Planning, Analysis │ write spec, refine spec, estimate effort, gather requirements, define scope │                                                                                                                      
+  │ Specifier  │ Planning, Analysis │ write spec, refine spec, estimate effort, gather requirements, define scope │
   ├────────────┼────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
   │ Architect  │ Design             │ system design, API design, data modeling, threat modeling, prototype        │
   ├────────────┼────────────────────┼─────────────────────────────────────────────────────────────────────────────┤
@@ -16,10 +16,12 @@
 
   Flow:
 
+```
   Specifier → Architect → Builder → Verifier → Deployer
                   ↑           ↑          ↑          ↑
                   └───────────┴──────────┴──────────┘
                            Documenter
+```
 
   This gives you clear ownership:
   - Specifier answers "what and why"
