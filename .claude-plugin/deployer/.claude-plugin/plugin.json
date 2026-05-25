@@ -1,5 +1,0 @@
-{
-  "name": "deployer",
-  "version": "1.0.0",
-  "agents": ["./agents/deployer/deployer.md"]
-}

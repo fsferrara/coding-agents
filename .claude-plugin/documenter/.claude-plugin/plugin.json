@@ -1,9 +1,0 @@
-{
-  "name": "documenter",
-  "version": "1.0.0",
-  "agents": ["./agents/documenter/documenter.md"],
-  "skills": [
-    "./skills/create-technical-presentation",
-    "./skills/technical-documentation"
-  ]
-}

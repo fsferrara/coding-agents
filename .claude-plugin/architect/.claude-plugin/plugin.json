@@ -1,5 +1,0 @@
-{
-  "name": "architect",
-  "version": "1.0.0",
-  "agents": ["./agents/architect/architect.md"]
-}
