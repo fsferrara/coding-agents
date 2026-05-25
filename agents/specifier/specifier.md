@@ -7,7 +7,7 @@ description: >
 model: inherit
 tools: [Read, Write, Edit, Bash, Glob, Grep]
 skills:
-  - skills/spec-manager
+  - spec-manager
 ---
 
 # Specifier

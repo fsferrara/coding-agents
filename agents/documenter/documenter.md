@@ -8,8 +8,8 @@ description: >
 model: inherit
 tools: [Read, Write, Edit, Bash, Glob, Grep]
 skills:
-  - skills/create-technical-presentation
-  - skills/technical-documentation
+  - create-technical-presentation
+  - technical-documentation
 ---
 
 # Documenter

@@ -8,8 +8,8 @@ description: >
 model: inherit
 tools: [Read, Write, Edit, Bash, Glob, Grep]
 skills:
-  - skills/local-code-review
-  - skills/agentive-code-review
+  - local-code-review
+  - agentive-code-review
 ---
 
 # Verifier

@@ -30,7 +30,7 @@ description: >               # required, free-text trigger guidance
 model: inherit               # optional; "inherit" is portable across runtimes
 tools: [Read, Write, Edit, Bash, Glob, Grep]   # optional, Claude-specific allowlist
 skills:                      # custom, repo convention; mirrored in body
-  - skills/<skill-name>
+  - <skill-name>
 ---
 ```
 
